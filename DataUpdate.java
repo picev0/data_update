@@ -69,6 +69,7 @@ public void updateOracle() throws Exception{
 		}catch(SQLException e){
 			
 			// ロールバック
+			//自動コミットがオンの状態でロールバックできないとなる
 			if(conn != null){
 				conn.rollback();
 			}
@@ -76,6 +77,7 @@ public void updateOracle() throws Exception{
 		}catch(Exception e){
 			
 			//ロールバック
+			//自動コミットがオンの状態でロールバックできないとなる
 			if(conn != null){
 				conn.rollback();
 			}
